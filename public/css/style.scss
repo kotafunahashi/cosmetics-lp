@@ -1,0 +1,42 @@
+$base-color01: #9d5a4d;
+$base-color02: #e6dad1;
+
+body{
+    color: $base-color01;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.bg01{
+    background-color: $base-color02;
+}
+.bg02{
+    background-color: $base-color01;
+    color: $base-color02;
+}
+.bg03{
+    background-color: #bfcbd8;
+}
+
+.serif{
+    font-family: serif;
+}
+
+.btn{
+    display: inline-block;
+    &:hover{
+        background-color: $base-color01;
+        color: #fff;
+    }
+}
+.btn02{
+    display: inline-block;
+    color: $base-color01;
+    &:hover{
+        background-color: $base-color02;
+        color: #fff;
+    }
+}

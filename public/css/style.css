@@ -1,0 +1,42 @@
+body {
+  color: #9d5a4d;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.bg01 {
+  background-color: #e6dad1;
+}
+
+.bg02 {
+  background-color: #9d5a4d;
+  color: #e6dad1;
+}
+
+.bg03 {
+  background-color: #bfcbd8;
+}
+
+.serif {
+  font-family: serif;
+}
+
+.btn {
+  display: inline-block;
+}
+.btn:hover {
+  background-color: #9d5a4d;
+  color: #fff;
+}
+
+.btn02 {
+  display: inline-block;
+  color: #9d5a4d;
+}
+.btn02:hover {
+  background-color: #e6dad1;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
