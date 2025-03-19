@@ -1,20 +1,20 @@
 import getWeather from '@/app/lib/getWeather';
 
-// fetchProducts 関数はそのままでOK！
-async function fetchProducts() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/products.json`);
-  if (!res.ok) throw new Error('Failed to fetch products');
-  return res.json();
-}
-
 // 型定義を修正して props を受け取る部分を改善
-export default async function LPPage(
+async function fetchProducts() {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/products.json`
+    );
+    if (!res.ok) throw new Error('Failed to fetch products');
+    return res.json();
+  }
+  
+  export default async function LPPage(
     pageProps: { params: { source: string } }
   ) {
-    // 必要なら params が Promise として解決されるように await を使用する
-    const { source } = await Promise.resolve(pageProps.params);
+    // ここで直接 params から値を取り出す
+    const { source } = pageProps.params;
   
-    // 以下、source を用いた処理
     let coverContent;
     if (source === "instagram") {
       coverContent = <img src="/images/cover.jpg" alt="Instagram Cover" />;
@@ -23,7 +23,7 @@ export default async function LPPage(
     } else {
       coverContent = <img src="/images/cover3.jpg" alt="Default Cover" />;
     }
-    
+  
     const weather = await getWeather();
     const isRainy = weather.isRainy;
     const products = await fetchProducts();
@@ -31,10 +31,11 @@ export default async function LPPage(
     if (!Array.isArray(sourceProducts)) {
       throw new Error('sourceProducts is not an array');
     }
-    
+  
     const recommendedProducts = isRainy
       ? [...sourceProducts.slice(0, 2), ...products.rainy]
       : sourceProducts;
+  
 
   return (
     <>
