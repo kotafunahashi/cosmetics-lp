@@ -8,11 +8,13 @@ async function fetchProducts() {
 }
 
 // 型定義を修正して props を受け取る部分を改善
-export default async function LPPage({ params }: { params: { source: string } }) {
-    // params を await してからプロパティを参照
-    const { source } = await Promise.resolve(params);
-  
-    // 動的ルートのパラメータ source に応じたカバーエリアの内容を決定
+export default async function LPPage({
+    params: { source },
+  }: {
+    params: { source: string };
+  }) {
+    // ここで source を直接使用
+    // 動的ルートのパラメータに応じたカバーエリアの内容決定など
     let coverContent;
     if (source === "instagram") {
       coverContent = <img src="/images/cover.jpg" alt="Instagram Cover" />;
