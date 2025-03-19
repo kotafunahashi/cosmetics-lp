@@ -8,13 +8,13 @@ async function fetchProducts() {
 }
 
 // 型定義を修正して props を受け取る部分を改善
-export default async function LPPage({
-    params: { source },
-  }: {
-    params: { source: string };
-  }) {
-    // ここで source を直接使用
-    // 動的ルートのパラメータに応じたカバーエリアの内容決定など
+export default async function LPPage(
+    pageProps: { params: { source: string } }
+  ) {
+    // 必要なら params が Promise として解決されるように await を使用する
+    const { source } = await Promise.resolve(pageProps.params);
+  
+    // 以下、source を用いた処理
     let coverContent;
     if (source === "instagram") {
       coverContent = <img src="/images/cover.jpg" alt="Instagram Cover" />;
@@ -23,22 +23,18 @@ export default async function LPPage({
     } else {
       coverContent = <img src="/images/cover3.jpg" alt="Default Cover" />;
     }
-
-  // 天気情報と商品データを取得
-  const weather = await getWeather();
-  const isRainy = weather.isRainy;
-  const products = await fetchProducts();
-
-  // sourceProducts の存在チェックと型安全性を確保
-  const sourceProducts = products[source] || products.recommend;
-  if (!Array.isArray(sourceProducts)) {
-    throw new Error('sourceProducts is not an array');
-  }
-
-  // 雨の日おすすめ商品の処理
-  const recommendedProducts = isRainy
-    ? [...sourceProducts.slice(0, 2), ...products.rainy]
-    : sourceProducts;
+    
+    const weather = await getWeather();
+    const isRainy = weather.isRainy;
+    const products = await fetchProducts();
+    const sourceProducts = products[source] || products.recommend;
+    if (!Array.isArray(sourceProducts)) {
+      throw new Error('sourceProducts is not an array');
+    }
+    
+    const recommendedProducts = isRainy
+      ? [...sourceProducts.slice(0, 2), ...products.rainy]
+      : sourceProducts;
 
   return (
     <>
