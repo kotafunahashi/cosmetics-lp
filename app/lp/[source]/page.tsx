@@ -1,4 +1,5 @@
 import getWeather from '@/app/lib/getWeather';
+import { SparklesIcon } from '@heroicons/react/24/solid'
 
 async function fetchProducts() {
   const res = await fetch(
@@ -74,15 +75,15 @@ export default async function LPPage(
                 <div className="flex-1">
                     <dl className="mb-15">
                         <dt>オーガニック</dt>
-                        <dd className="text-2xl serif">すべて<br/>天然成分</dd>
+                        <dd className="text-2xl serif"><SparklesIcon className="size-6" /> すべて<br/>天然成分</dd>
                     </dl>
                     <dl className="mb-15">
                         <dt>優しい</dt>
-                        <dd className="text-2xl serif">敏感肌でも<br/>安心</dd>
+                        <dd className="text-2xl serif"><SparklesIcon className="size-6" /> 敏感肌でも<br/>安心</dd>
                     </dl>
                     <dl>
                         <dt>効果</dt>
-                        <dd className="text-2xl serif">臨床試験済み</dd>
+                        <dd className="text-2xl serif"><SparklesIcon className="size-6" /> 臨床試験済み</dd>
                     </dl>
                 </div>
                 <div>
