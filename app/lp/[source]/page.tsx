@@ -51,6 +51,61 @@ export default async function LPPage(
         </div>
       </header>
       <main>
+      <section id="newProduct" className="bg02">
+            <div className="flex max-w-7xl mx-auto items-center">
+                <div className="flex-1">
+                    <a href=""><img src="/images/pic01.jpg" alt=""/></a>
+                </div>
+                <div className="flex-1">
+                    <h2 className="text-2xl">新商品のプレビュー</h2>
+                    <div className="flex gap-10 items-center justify-between">
+                        <div className="flex-1">
+                            <p className="text-2xl serif">オゾニアは、軽い使用感で、確かな効果が感じられる敏感肌用のラインです。<br/>すべての製品に植物エキスとピュアな氷河の水を使用しており、自然な輝きを放ちます！</p>
+                        </div>
+                        <div>
+                            <a href=""><img src="/images/pic02.jpg" alt=""/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" className="bg01">
+            <div className="flex max-w-7xl mx-auto items-center justify-between">
+                <div className="flex-1">
+                    <dl className="mb-15">
+                        <dt>オーガニック</dt>
+                        <dd className="text-2xl serif">すべて<br/>天然成分</dd>
+                    </dl>
+                    <dl className="mb-15">
+                        <dt>優しい</dt>
+                        <dd className="text-2xl serif">敏感肌でも<br/>安心</dd>
+                    </dl>
+                    <dl>
+                        <dt>効果</dt>
+                        <dd className="text-2xl serif">臨床試験済み</dd>
+                    </dl>
+                </div>
+                <div>
+                    <a href=""><img src="/images/pic03.jpg" alt=""/></a>
+                </div>
+            </div>
+        </section>
+        <section id="feature" className="bg03">
+            <div className="max-w-7xl mx-auto flex gap-10 items-center justify-between text-center pt-20 pb-20">
+                <div className="bg-white">
+                    <img src="/images/pic04.jpg" alt=""/>
+                    <p className="serif p-3">新鮮な植物エキス</p>
+                </div>
+                <div className="bg-white">
+                    <img src="/images/pic05.jpg" alt=""/>
+                    <p className="serif p-3">純粋な氷河水</p>
+                </div>
+                <div className="bg-white">
+                    <img src="/images/pic06.jpg" alt=""/>
+                    <p className="serif p-3">ビタミンを豊富に配合</p>
+                </div>
+            </div>
+        </section>
         <section id="product" className="bg02">
           <div className="max-w-7xl mx-auto text-center pt-20 pb-20">
             <h2 className="text-2xl mb-10">いち早く、オゾニアシリーズをご体験ください</h2>
