@@ -1,0 +1,48 @@
+{
+  "recommend": [
+    {
+      "id": 1,
+      "name": "化粧水",
+      "description": "保湿成分たっぷりの化粧水。",
+      "image": "/images/pic07.jpg",
+      "link": "/product/1"
+    },
+    {
+      "id": 2,
+      "name": "美容オイル",
+      "description": "潤いを与える美容オイル。",
+      "image": "/images/pic08.jpg",
+      "link": "/product/2"
+    },
+    {
+      "id": 3,
+      "name": "美容パック",
+      "description": "スペシャルケアの美容パック。",
+      "image": "/images/pic09.jpg",
+      "link": "/product/3"
+    },
+    {
+      "id": 4,
+      "name": "クリーム",
+      "description": "しっとり仕上がる保湿クリーム。",
+      "image": "/images/pic10.jpg",
+      "link": "/product/4"
+    }
+  ],
+  "rainy": [
+    {
+      "id": 5,
+      "name": "雨の日スペシャル保湿クリーム",
+      "description": "雨の日の乾燥対策に最適なクリーム。",
+      "image": "/images/pic09.jpg",
+      "link": "/product/5"
+    },
+    {
+      "id": 6,
+      "name": "レインガード美容液",
+      "description": "湿気に負けない美容液。",
+      "image": "/images/pic10.jpg",
+      "link": "/product/6"
+    }
+  ]
+}
