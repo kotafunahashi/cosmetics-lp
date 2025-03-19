@@ -9,17 +9,18 @@ async function fetchProducts() {
 
 // 型定義を修正して props を受け取る部分を改善
 export default async function LPPage({ params }: { params: { source: string } }) {
-  const { source } = params;
-
-  // 動的ルートのパラメータ source に応じたカバーエリアの内容を決定
-  let coverContent;
-  if (source === "instagram") {
-    coverContent = <img src="/images/cover.jpg" alt="Instagram Cover" />;
-  } else if (source === "youtube") {
-    coverContent = <img src="/images/cover2.jpg" alt="YouTube Cover" />;
-  } else {
-    coverContent = <img src="/images/cover3.jpg" alt="Default Cover" />;
-  }
+    // params を await してからプロパティを参照
+    const { source } = await Promise.resolve(params);
+  
+    // 動的ルートのパラメータ source に応じたカバーエリアの内容を決定
+    let coverContent;
+    if (source === "instagram") {
+      coverContent = <img src="/images/cover.jpg" alt="Instagram Cover" />;
+    } else if (source === "youtube") {
+      coverContent = <img src="/images/cover2.jpg" alt="YouTube Cover" />;
+    } else {
+      coverContent = <img src="/images/cover3.jpg" alt="Default Cover" />;
+    }
 
   // 天気情報と商品データを取得
   const weather = await getWeather();
