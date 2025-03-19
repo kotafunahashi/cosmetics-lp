@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import getWeather from '@/app/lib/getWeather';
 
 async function fetchProducts() {
@@ -8,9 +7,26 @@ async function fetchProducts() {
 }
 
 export default async function LPPage(props: { params: { source: string } }) {
+
   // await params を使ってから値を取り出す
   const { source } = await Promise.resolve(props.params);
-  
+
+    // 動的ルートのパラメータsourceに応じたカバーエリアの内容を決定
+    let coverContent;
+    if (source === "instagram") {
+        coverContent = (
+            <img src="/images/cover.jpg" alt=""/>
+        );
+    } else if (source === "youtube") {
+        coverContent = (
+            <img src="/images/cover2.jpg" alt=""/>
+        );
+    } else {
+        coverContent = (
+            <img src="/images/cover3.jpg" alt=""/>
+        );
+    }
+
   const weather = await getWeather();
   const isRainy = weather.isRainy;
   const products = await fetchProducts();
@@ -39,7 +55,7 @@ export default async function LPPage(props: { params: { source: string } }) {
                     <a href="#" className="btn bg-white font-bold py-2 px-4 rounded-full">ひと足先にチェックする</a>
                 </div>
                 <div className="flex-1">
-                    <img src="/images/cover.jpg" alt=""/>
+                {coverContent}
                 </div>
             </div>
         </div>
