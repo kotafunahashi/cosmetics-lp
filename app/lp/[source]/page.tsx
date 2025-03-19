@@ -71,18 +71,18 @@ export default async function LPPage(
             </div>
         </section>
         <section id="about" className="bg01">
-            <div className="flex max-w-7xl mx-auto items-center justify-between">
+            <div className="flex max-w-4xl mx-auto items-center justify-between">
                 <div className="flex-1">
                     <dl className="mb-15">
-                        <dt><SparklesIcon className="size-6" /> オーガニック</dt>
+                        <dt className="mb-2"><SparklesIcon className="size-6" /> オーガニック</dt>
                         <dd className="text-2xl serif">すべて<br/>天然成分</dd>
                     </dl>
                     <dl className="mb-15">
-                        <dt><SparklesIcon className="size-6" /> 優しい</dt>
+                        <dt className="mb-2"><SparklesIcon className="size-6" /> 優しい</dt>
                         <dd className="text-2xl serif">敏感肌でも<br/>安心</dd>
                     </dl>
                     <dl>
-                        <dt><SparklesIcon className="size-6" /> 効果</dt>
+                        <dt className="mb-2"><SparklesIcon className="size-6" /> 効果</dt>
                         <dd className="text-2xl serif">臨床試験済み</dd>
                     </dl>
                 </div>
