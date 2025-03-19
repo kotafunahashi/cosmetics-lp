@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+1. プロジェクト名と概要
 
-## Getting Started
+# Cosmetics LP Project 🌿
+InstagramやYouTubeからの流入に応じておすすめ商品を変更し、雨の日には特別な商品を表示するコスメLPサイトです。
 
-First, run the development server:
+2. デモ（任意）
 
-```bash
+## 🚀 デモ
+[ライブデモを見る](https://example.com)
+
+3. インストール手順
+
+## 🛠️ インストール手順
+
+1. リポジトリをクローン:
+   ```bash
+   git clone https://github.com/kotafunahashi/cosmetics-lp.git
+   cd cosmetics-lp
+
+2. パッケージをインストール:
+
+npm install
+
+3. 環境変数を設定（.env ファイルを作成して、APIキーを設定してください）:
+
+OPENWEATHER_API_KEY=あなたのAPIキー
+
+4. サーバーを起動:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで http://localhost:3000 にアクセス！
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### 4. **使い方**
 
-To learn more about Next.js, take a look at the following resources:
+## 📖 使い方
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `http://localhost:3000/lp/instagram` からアクセスすると Instagram 向けの商品が表示されます。
+- 天気が雨予報の日には「雨の日おすすめ商品」が追加されます。  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. ファイル構成
 
-## Deploy on Vercel
+## 📂 ファイル構成
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+/app ├── lp 
+     ├── [source] │
+        │ └── page.tsx
+     │ └── page.tsx
+├── public │
+     ├── products.json
+     │ └── images
+ └── .env
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ 6. 技術構成
+
+ ## ⚙️ 技術構成
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- OpenWeather API
+
+7. ライセンス
+
+## 📄 ライセンス
+このプロジェクトは MIT ライセンスのもとで公開されています。
