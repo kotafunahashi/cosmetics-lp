@@ -6,7 +6,10 @@ InstagramやYouTubeからの流入に応じておすすめ商品を変更し、�
 2. デモ（任意）
 
 ## 🚀 デモ
-[ライブデモを見る](https://example.com)
+[ライブデモを見る]
+https://cosmetics-lp.vercel.app/lp/
+https://cosmetics-lp.vercel.app/lp/instagram
+https://cosmetics-lp.vercel.app/lp/youtube
 
 3. インストール手順
 
@@ -38,7 +41,7 @@ npm run dev
 
 ## 📖 使い方
 
-- `http://localhost:3000/lp/instagram` からアクセスすると Instagram 向けの商品が表示されます。
+- `http://localhost:3000/lp/instagram` からアクセスすると Instagram 向けの画像が表示されます。
 - 天気が雨予報の日には「雨の日おすすめ商品」が追加されます。  
 
 5. ファイル構成
