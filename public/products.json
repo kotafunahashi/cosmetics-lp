@@ -43,6 +43,20 @@
       "description": "湿気に負けない美容液。",
       "image": "/images/pic10.jpg",
       "link": "/product/6"
+    },
+    {
+      "id": 7,
+      "name": "雨の日に強いヘアエッセンスオイル",
+      "description": "雨の日にも強い！ヘアエッセンスオイル。",
+      "image": "/images/pic11.jpg",
+      "link": "/product/5"
+    },
+    {
+      "id": 8,
+      "name": "レインガード＆ケアオイル",
+      "description": "まとまりのあるサラツヤ質感を1日キープ。",
+      "image": "/images/pic12.jpg",
+      "link": "/product/6"
     }
   ]
 }

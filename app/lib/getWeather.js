@@ -11,7 +11,7 @@ export default async function getWeather() {
     if (!res.ok) throw new Error('Failed to fetch weather');
   
     const data = await res.json();
-    const forecast = data.list.slice(0, 16); // 2日分
+    const forecast = data.list.slice(0, 8); // 2日分
     const isRainy = forecast.some((item) => item.weather[0].main === 'Rain');
   
     return { isRainy };

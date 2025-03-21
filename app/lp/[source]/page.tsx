@@ -27,14 +27,11 @@ export default async function LPPage(
   const weather = await getWeather();
   const isRainy = weather.isRainy;
   const products = await fetchProducts();
-  const sourceProducts = products[source] || products.recommend;
-  if (!Array.isArray(sourceProducts)) {
-    throw new Error('sourceProducts is not an array');
-  }
 
-  const recommendedProducts = isRainy
-    ? [...sourceProducts.slice(0, 2), ...products.rainy]
-    : sourceProducts;
+  // 推奨商品は常に "recommend" を使う前提（products.json 内に 4 件用意）
+  const recommendProducts = products.recommend;
+  // 雨の日におすすめは "rainy"（雨の日の場合のみ表示）
+  const rainyProducts = products.rainy;
 
   return (
     <>
@@ -111,7 +108,7 @@ export default async function LPPage(
           <div className="max-w-7xl mx-auto text-center pt-20 pb-20">
             <h2 className="text-2xl mb-10">いち早く、オゾニアシリーズをご体験ください</h2>
             <ul className="flex gap-10 items-center justify-between mb-10">
-              {recommendedProducts.map((product: any) => (
+              {recommendProducts.map((product: any) => (
                 <li key={product.id}>
                   <a href={product.link}>
                     <img src={product.image} alt={product.name} className="mb-2" />
@@ -121,6 +118,22 @@ export default async function LPPage(
                 </li>
               ))}
             </ul>
+          {isRainy && (
+            <>
+            <h2 className="text-2xl pt-10 mb-10">雨の日におすすめ</h2>
+            <ul className="flex gap-10 items-center justify-between mb-10">
+                {rainyProducts.map((product: any) => (
+                  <li key={product.id}>
+                    <a href={product.link}>
+                      <img src={product.image} alt={product.name} className="mb-2" />
+                    </a>
+                    <h2 className="text-lg font-semibold serif">{product.name}</h2>
+                    <p className="text-sm serif">{product.description}</p>
+                  </li>
+                ))}
+              </ul>)
+            </>
+            )}
             <a href="#" className="btn02 bg-white font-bold py-2 px-4 rounded-full">ひと足先にチェックする</a>
           </div>
         </section>
