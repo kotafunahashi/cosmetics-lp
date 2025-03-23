@@ -37,8 +37,8 @@ export default async function LPPage(
     <>
       <header className="bg01">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center">
-            <div className="flex-1">
+          <div className="md:flex items-center">
+            <div className="flex-1 p-4">
               <h1 className="mb-10">ソフトブラシビューティ</h1>
               <p className="serif text-7xl mb-5">まもなく<br />発売開始</p>
               <p className="mb-10">最新のフェイシャルライン<br />「オゾニア」の発売を開始します。</p>
@@ -50,13 +50,13 @@ export default async function LPPage(
       </header>
       <main>
       <section id="newProduct" className="bg02">
-            <div className="flex max-w-7xl mx-auto items-center">
+            <div className="md:flex max-w-7xl mx-auto items-center">
                 <div className="flex-1">
                     <a href=""><img src="/images/pic01.jpg" alt=""/></a>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 xs:p-4">
                     <h2 className="text-2xl">新商品のプレビュー</h2>
-                    <div className="flex gap-10 items-center justify-between">
+                    <div className="md:flex gap-10 items-center justify-between">
                         <div className="flex-1">
                             <p className="text-2xl serif">オゾニアは、軽い使用感で、確かな効果が感じられる敏感肌用のラインです。<br/>すべての製品に植物エキスとピュアな氷河の水を使用しており、自然な輝きを放ちます！</p>
                         </div>
@@ -68,7 +68,7 @@ export default async function LPPage(
             </div>
         </section>
         <section id="about" className="bg01">
-            <div className="flex max-w-4xl mx-auto items-center justify-between">
+            <div className="md:flex max-w-4xl mx-auto items-center justify-between">
                 <div className="flex-1">
                     <dl className="mb-15">
                         <dt className="mb-2"><SparklesIcon className="size-6" /> オーガニック</dt>
@@ -89,7 +89,7 @@ export default async function LPPage(
             </div>
         </section>
         <section id="feature" className="bg03">
-            <div className="max-w-7xl mx-auto flex gap-10 items-center justify-between text-center pt-20 pb-20">
+            <div className="max-w-7xl mx-auto md:flex gap-10 items-center justify-between text-center pt-20 pb-20">
                 <div className="bg-white">
                     <img src="/images/pic04.jpg" alt=""/>
                     <p className="serif p-3">新鮮な植物エキス</p>
@@ -107,7 +107,7 @@ export default async function LPPage(
         <section id="product" className="bg02">
           <div className="max-w-7xl mx-auto text-center pt-20 pb-20">
             <h2 className="text-2xl mb-10">いち早く、オゾニアシリーズをご体験ください</h2>
-            <ul className="flex gap-10 items-center justify-between mb-10">
+            <ul className="md:flex gap-10 items-center justify-between mb-10">
               {recommendProducts.map((product: any) => (
                 <li key={product.id}>
                   <a href={product.link}>
@@ -121,7 +121,7 @@ export default async function LPPage(
           {isRainy && (
             <>
             <h2 className="text-2xl pt-10 mb-10">雨の日におすすめ</h2>
-            <ul className="flex gap-10 items-center justify-between mb-10">
+            <ul className="md:flex gap-10 items-center justify-between mb-10">
                 {rainyProducts.map((product: any) => (
                   <li key={product.id}>
                     <a href={product.link}>

@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "オゾニア｜ソフトブラシビューティ",
   description: "最新のフェイシャルライン「オゾニア」の発売を開始します。",
+  viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({
@@ -27,7 +28,6 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <meta charSet="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body
